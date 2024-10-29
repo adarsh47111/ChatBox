@@ -1,4 +1,5 @@
-const Base_URL = "http://localhost:3000/";
+// const Base_URL = "http://localhost:3000/";
+const Base_URL = "https://chatbox-r9sf.onrender.com/";
 
 const register = async ({ username, email, password }) => {
   let res, data;
@@ -491,4 +492,5 @@ export {
   sendEmail,
   sendOtp,
   sendNewPassword,
+  Base_URL,
 };

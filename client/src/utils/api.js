@@ -1,5 +1,4 @@
-// const Base_URL = "http://localhost:3000/";
-const Base_URL = "https://chatbox-r9sf.onrender.com/";
+const Base_URL = import.meta.env.Base_URL;
 
 const register = async ({ username, email, password }) => {
   let res, data;

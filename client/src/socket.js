@@ -1,7 +1,7 @@
 import io from "socket.io-client";
 
 let socket;
-const Base_URL = "https://chatbox-r9sf.onrender.com/";
+const Base_URL = import.meta.env.Base_URL;
 
 const connectSocket = (user_id) => {
   socket = io(Base_URL, {

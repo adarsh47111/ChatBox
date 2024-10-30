@@ -34,7 +34,13 @@ const server = http.createServer(app);
 
 connectDB();
 
-app.use(cors());
+app.use(
+  cors({
+    origin: "http://localhost:5173",
+    methods: ["GET", "POST", "PUT", "DELETE"],
+    credentials: true, // Include if using cookies or credentials
+  })
+);
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 

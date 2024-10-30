@@ -3,13 +3,13 @@ import { initializeApp } from "firebase/app";
 import { deleteObject, getStorage, ref } from "firebase/storage";
 
 const firebaseConfig = {
-  apiKey: FIREBASE_apiKey,
-  authDomain: FIREBASE_authDomain,
-  projectId: FIREBASE_projectId,
-  storageBucket: FIREBASE_storageBucket,
-  messagingSenderId: FIREBASE_messagingSenderId,
-  appId: FIREBASE_appId,
-  measurementId: FIREBASE_measurementId,
+  apiKey: process.env.FIREBASE_apiKey,
+  authDomain: process.env.FIREBASE_authDomain,
+  projectId: process.env.FIREBASE_projectId,
+  storageBucket: process.env.FIREBASE_storageBucket,
+  messagingSenderId: process.env.FIREBASE_messagingSenderId,
+  appId: process.env.FIREBASE_appId,
+  measurementId: process.env.FIREBASE_measurementId,
 };
 
 // Initialize Firebase

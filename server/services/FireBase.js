@@ -3,7 +3,7 @@ import { initializeApp } from "firebase/app";
 import { deleteObject, getStorage, ref } from "firebase/storage";
 
 const firebaseConfig = {
-  apiKey: FIREBASE_API_KEY,
+  apiKey: FIREBASE_apiKey,
   authDomain: FIREBASE_authDomain,
   projectId: FIREBASE_projectId,
   storageBucket: FIREBASE_storageBucket,

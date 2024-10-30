@@ -15,12 +15,7 @@ const Login = () => {
     handleSubmit,
     reset,
     formState: { errors },
-  } = useForm({
-    defaultValues: {
-      email: "u1@g.com",
-      password: "123",
-    },
-  });
+  } = useForm();
 
   const submit = async (formData) => {
     const { status, message, data } = await login({

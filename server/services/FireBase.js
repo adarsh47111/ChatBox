@@ -1,32 +1,19 @@
 // Import the functions you need from the SDKs you need
 import { initializeApp } from "firebase/app";
-import { getAnalytics } from "firebase/analytics";
-import {
-  deleteObject,
-  getDownloadURL,
-  getStorage,
-  ref,
-  uploadBytes,
-  uploadBytesResumable,
-} from "firebase/storage";
-// TODO: Add SDKs for Firebase products that you want to use
-// https://firebase.google.com/docs/web/setup#available-libraries
+import { deleteObject, getStorage, ref } from "firebase/storage";
 
-// Your web app's Firebase configuration
-// For Firebase JS SDK v7.20.0 and later, measurementId is optional
 const firebaseConfig = {
-  apiKey: "AIzaSyDUEoJYTqpWsTkcXXT3KFzd-x5yxQZH59E",
-  authDomain: "chat-app-690d2.firebaseapp.com",
-  projectId: "chat-app-690d2",
-  storageBucket: "chat-app-690d2.appspot.com",
-  messagingSenderId: "422240242400",
-  appId: "1:422240242400:web:495931c7277117916ede85",
-  measurementId: "G-TBHWH0BR43",
+  apiKey: FIREBASE_API_KEY,
+  authDomain: FIREBASE_authDomain,
+  projectId: FIREBASE_projectId,
+  storageBucket: FIREBASE_storageBucket,
+  messagingSenderId: FIREBASE_messagingSenderId,
+  appId: FIREBASE_appId,
+  measurementId: FIREBASE_measurementId,
 };
 
 // Initialize Firebase
 export const appFirebase = initializeApp(firebaseConfig);
-// const analytics = getAnalytics(appFirebase);
 
 export const deleteFile = async ({ fileName }) => {
   return new Promise((resolve, reject) => {

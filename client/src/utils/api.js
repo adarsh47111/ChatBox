@@ -1,4 +1,4 @@
-const Base_URL = import.meta.env.Base_URL;
+const Base_URL = import.meta.env.VITE_BASE_URL;
 
 const register = async ({ username, email, password }) => {
   let res, data;

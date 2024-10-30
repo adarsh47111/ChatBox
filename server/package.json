@@ -5,7 +5,7 @@
   "main": "server.js",
   "type": "module",
   "scripts": {
-    "start": "npx nodemon"
+    "start": "node server.js"
   },
   "author": "Adarsh Goutam",
   "license": "ISC",

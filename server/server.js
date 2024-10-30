@@ -14,31 +14,19 @@ import cors from "cors";
 import { deleteFile } from "./services/FireBase.js";
 import { errorHandler } from "./errorHandler.js";
 import mongoose from "mongoose";
-import morgan from "morgan";
-import winston from "winston";
 import dotenv from "dotenv";
 
 dotenv.config();
 const app = express();
 const server = http.createServer(app);
 
-// Create a logger
-// const logger = winston.createLogger({
-//   level: "info",
-//   format: winston.format.json(),
-//   transports: [
-//     new winston.transports.File({ filename: "combined.log" }),
-//     // new winston.transports.Console(), // Optional: log to console as well
-//   ],
-// });
-
 connectDB();
 
 app.use(
   cors({
-    origin: "http://localhost:5173",
+    origin: process.env.CLIENT_URL,
     methods: ["GET", "POST", "PUT", "DELETE"],
-    credentials: true, // Include if using cookies or credentials
+    credentials: true,
   })
 );
 app.use(express.json());

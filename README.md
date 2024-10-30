@@ -7,7 +7,7 @@ A **real-time chat application** built using **React** and **Node.js**. This app
 - **Real-time messaging** using Socket.IO
 - **User authentication** for secure access
 - **File/image upload** to Firebase
-- **OTP verification** for user registration/login
+- **OTP verification** for user password reset
 - **Chat history** stored in MongoDB
 
 ## 🚀 Usage

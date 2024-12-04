@@ -24,6 +24,7 @@ import {
   UserRoundX,
 } from "lucide-react";
 import ToolTipCustom from "./ToolTipCustom";
+import { ScrollArea } from "../ui/scroll-area";
 
 const FriendsDialogBox = ({ children }) => {
   const [selectedTab, setSelectedTab] = useState(1);
@@ -39,6 +40,9 @@ const FriendsDialogBox = ({ children }) => {
           className=" flex flex-col w-96 h-[30rem]"
         >
           <TabMenu selectedTab={selectedTab} setSelectedTab={setSelectedTab} />
+          <ScrollArea
+          className="flex-1 rounded-md px-4 py-2 bg-cover bg-center"
+          >
           {(() => {
             switch (selectedTab) {
               case 1:
@@ -49,6 +53,7 @@ const FriendsDialogBox = ({ children }) => {
                 return <FriendsRequestTab />;
             }
           })()}
+          </ScrollArea>
         </DialogContent>
       </Dialog>
     </div>
@@ -101,6 +106,7 @@ const ExploreTab = () => {
   return (
     <>
       <div className="flex-1">
+
         {all_users?.map((u) => (
           <div
             key={u._id}
@@ -123,6 +129,7 @@ const ExploreTab = () => {
             </div>
           </div>
         ))}
+
       </div>
     </>
   );
